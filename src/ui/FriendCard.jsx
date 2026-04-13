@@ -15,6 +15,7 @@ const FriendCard = ({friend}) => {
         />
       </figure>
       <div className="card-body text-center">
+        <h1 className="font-semibold text-xl">{friend.name}</h1>
         <p>{friend.days_since_contact}d ago</p>
         <div className="flex justify-center items-center gap-2 ">
           {friend.tags.map((tag, index) => (
