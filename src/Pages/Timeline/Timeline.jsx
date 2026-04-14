@@ -24,7 +24,7 @@ const Timeline = () => {
 
         
         <div className=''>
-          <h3>{item.name}</h3>
+          <h3><span className='text-[#244D3F] font-bold'>{item.type}</span> With {item.name}</h3>
           <p>{new Date(item.time).toLocaleString()}</p>
         </div>
 
