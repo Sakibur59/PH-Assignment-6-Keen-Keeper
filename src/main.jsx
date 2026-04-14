@@ -11,7 +11,7 @@ import FriendProvider from './FriendContext/FriendProvide'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <FriendProvider>
-      <RouterProvider router={router} />,
+      <RouterProvider router={router} />
     </FriendProvider>
   </StrictMode>,
 )

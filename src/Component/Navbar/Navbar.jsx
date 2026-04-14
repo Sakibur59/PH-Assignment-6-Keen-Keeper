@@ -4,6 +4,7 @@ import { TfiStatsUp } from "react-icons/tfi";
 import { TiHomeOutline } from "react-icons/ti";
 import { Link, NavLink } from "react-router";
 import logo from '../../assets/logo.png'
+import { ImStatsDots } from "react-icons/im";
 
 const Navbar = () => {
   const links = (
@@ -33,7 +34,7 @@ const Navbar = () => {
           to={"/stats"}
           className={({ isActive }) => ` flex items-center gap-1  text-[#64748B]  ${isActive ? "bg-[#244D3F] text-white px-2 py-2 rounded-md" : ""}`}
         >
-            <TfiStatsUp />
+            <ImStatsDots />
           Stats
         </NavLink>
       </li>
