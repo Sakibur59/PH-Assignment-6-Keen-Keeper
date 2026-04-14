@@ -13,7 +13,7 @@ const friendDetails = () => {
   const friends = useLoaderData();
 
   const expectedFriend = friends.find((friend) => friend.id == friendId);
-const {handleCallList,handleTextList} = useContext(friendContext);
+const {HandleAllList} = useContext(friendContext);
   return (
     <div className="min-h-screen  p-6">
       <div className="max-w-4xl mx-auto ">
@@ -114,19 +114,19 @@ const {handleCallList,handleTextList} = useContext(friendContext);
                 Quick Check-In
               </h3>
               <div className="grid grid-cols-3 gap-3">
-                <button onClick={()=>handleCallList(expectedFriend)} className="btn  flex-col h-20 py-4 gap-2">
+                <button onClick={()=>HandleAllList("Call", expectedFriend)} className="btn  flex-col h-20 py-4 gap-2">
                   <span className="text-xl">
                     <IoCall />
                   </span>
                   Call
                 </button>
-                <button onClick={()=>handleTextList(expectedFriend)} className="btn  flex-col  h-20 py-4 gap-2">
+                <button onClick={()=>HandleAllList("Text",expectedFriend)} className="btn  flex-col  h-20 py-4 gap-2">
                   <span className="text-xl">
                     <RiMessage2Line />
                   </span>
                   Text
                 </button>
-                <button className="btn  flex-col h-20  py-4 gap-2">
+                <button onClick={()=>HandleAllList("Video",expectedFriend)}  className="btn  flex-col h-20  py-4 gap-2">
                   <span className="text-xl">
                     <LuVideo />
                   </span>

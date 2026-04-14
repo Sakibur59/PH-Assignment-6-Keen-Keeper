@@ -4,51 +4,27 @@ import { toast } from "react-toastify";
 export const friendContext = createContext();
 
 const FriendProvider = ({ children }) => {
-  const [callList, setCallList] = useState([]);
+  const [AllList, setAllList] = useState([]);
 
-  const [textList ,setTextList] = useState([])
 
-  const handleCallList = (currentFriend) => {
-    const isExistFriend = callList.find(
-      (friend) => friend.id === currentFriend.id,
-    );
+ const HandleAllList = (type, currentFriend) => {
+    const newItem = {
+      friendId: currentFriend.id,
+      name: currentFriend.name,
+      type: type,
+      time: new Date(),
+    };
 
-    if (isExistFriend) {
-      toast.error("The book is already Mark as read");
-    } else {
-      setCallList([...callList,currentFriend]);
-      toast.success(`${currentFriend.name} is added to Make as read`);
-    }
+    setAllList([newItem, ...AllList]);
+
+    toast.success(`${type} with ${currentFriend.name}`);
   };
-  const handleTextList = (currentFriend) => {
-    const isExistInCallList = callList.find(
-      (friend) => friend.id === currentFriend.id,
-    );
-
-    if (isExistInCallList) {
-      toast.error("The book is already in read list");
-      return;
-    }
-
-    const isExistInTextList = textList.find(
-      (friend) => friend.id === currentFriend.id,
-    );
-
-    if (isExistInTextList) {
-      toast.error("The book is already in Wishlist");
-    } else {
-      setTextList([...textList, currentFriend]);
-     toast.success(`${currentFriend.name} is added to Text`);
-    }
-  };
+ 
 
   const data = {
-    setCallList,
-    callList,
-    handleCallList,
-    textList,
-    setTextList,
-    handleTextList
+    AllList,
+    HandleAllList
+    
   };
   return <friendContext.Provider value={data}>{children}</friendContext.Provider>;
 };
