@@ -3,6 +3,7 @@ import { RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
 import { TiHomeOutline } from "react-icons/ti";
 import { Link, NavLink } from "react-router";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const links = (
@@ -67,7 +68,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <h2 className="text-xl"><span className="font-bold">Keen</span>Keeper</h2>
+        <div>
+          <img src={logo}alt="" />
+        </div>
       </div>
      
       <div className="navbar-end gap-4 list-none">
