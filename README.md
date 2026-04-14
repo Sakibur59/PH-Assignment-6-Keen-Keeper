@@ -9,7 +9,12 @@
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
 ---
-
+## 📖 Overview
+ 
+**KeenKeeper** is a React-based **friend activity tracker** that helps you stay on top of your interactions. Log calls, texts, and video chats — then visualize them through a unified timeline and pie chart analytics.
+ 
+> 💡 Built with React Context API for clean state management and Tailwind CSS for a minimal, responsive UI.
+---
 ## 🚀 Features
 
 | Feature | Description |

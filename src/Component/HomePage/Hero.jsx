@@ -1,4 +1,5 @@
 import React from "react";
+import { FaPlus } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
           relationships that matter most.
         </p>
         <button className="btn bg-[#244D3F] text-white px-6 py-2 rounded-md ">
-          + Add a Friend
+          <FaPlus /> Add a Friend
         </button>
       </div>
       <div className="grid grid-cols-4 gap-5 text-center mt-5  p-10 border-b border-[#E9E9E9]">

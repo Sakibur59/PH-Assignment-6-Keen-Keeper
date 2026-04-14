@@ -17,7 +17,7 @@ const {HandleAllList} = useContext(friendContext);
   return (
     <div className="min-h-screen  p-6">
       <div className="max-w-4xl mx-auto ">
-        <div className="grid grid-cols-3 gap-4 bg-[#F8FAFC]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 bg-[#F8FAFC]">
           <div className="col-span-1 flex flex-col gap-4 ">
             <div className="card bg-base-100  p-5 text-center shadow">
               <div className="flex justify-center mb-3 ">
