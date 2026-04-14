@@ -3,12 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { router } from './Routes/Routes'
 import { RouterProvider } from 'react-router'
+import FriendProvider from './FriendContext/FriendProvide'
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+     <FriendProvider>
+      <RouterProvider router={router} />,
+    </FriendProvider>
   </StrictMode>,
 )

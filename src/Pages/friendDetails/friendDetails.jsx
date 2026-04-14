@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiArchive } from "react-icons/fi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { IoCall } from "react-icons/io5";
@@ -6,13 +6,14 @@ import { LuVideo } from "react-icons/lu";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { RiMessage2Line } from "react-icons/ri";
 import { useLoaderData, useParams } from "react-router";
+import { friendContext } from "../../FriendContext/FriendProvide";
 
 const friendDetails = () => {
   const { friendId } = useParams();
   const friends = useLoaderData();
 
   const expectedFriend = friends.find((friend) => friend.id == friendId);
-
+const {handleCallList,handleTextList} = useContext(friendContext);
   return (
     <div className="min-h-screen  p-6">
       <div className="max-w-4xl mx-auto ">
@@ -113,13 +114,13 @@ const friendDetails = () => {
                 Quick Check-In
               </h3>
               <div className="grid grid-cols-3 gap-3">
-                <button className="btn  flex-col h-20 py-4 gap-2">
+                <button onClick={()=>handleCallList(expectedFriend)} className="btn  flex-col h-20 py-4 gap-2">
                   <span className="text-xl">
                     <IoCall />
                   </span>
                   Call
                 </button>
-                <button className="btn  flex-col  h-20 py-4 gap-2">
+                <button onClick={()=>handleTextList(expectedFriend)} className="btn  flex-col  h-20 py-4 gap-2">
                   <span className="text-xl">
                     <RiMessage2Line />
                   </span>

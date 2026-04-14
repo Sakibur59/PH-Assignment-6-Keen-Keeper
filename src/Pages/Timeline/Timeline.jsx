@@ -1,9 +1,10 @@
 import React from 'react';
+import ListedCallList from '../../Component/HomePage/ListedFriend/ListedCallList';
 
 const Timeline = () => {
     return (
         <div>
-            timeline
+            <ListedCallList></ListedCallList>
         </div>
     );
 };
