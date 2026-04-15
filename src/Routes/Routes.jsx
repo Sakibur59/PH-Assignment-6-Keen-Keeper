@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import friendDetails from "../Pages/friendDetails/friendDetails";
 import HomePage from "../Pages/Homepage/HomePage";
 import Timeline from "../Pages/Timeline/Timeline";
 import Stats from "../Pages/Stats/Stats";
-import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import friendDetails from "../Pages/friendDetails/friendDetails";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: HomePage,
+        Component: HomePage, 
       },
       {
         path: "/timeline",
