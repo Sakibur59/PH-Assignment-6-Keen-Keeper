@@ -15,7 +15,7 @@ const Timeline = () => {
     <h1 className='font-bold text-4xl'>Timeline</h1>
 
     <div className='mb-4 mt-3'>
-        <select className=' w-70 py-4 rounded-md shadow border border-[#E9E9E9]' value={filterData} onChange={(e)=> setFilterData(e.target.value)}>
+        <select className='w-full sm:w-36 md:w-48 lg:w-70 py-4 rounded-md shadow border border-[#E9E9E9]' value={filterData} onChange={(e)=> setFilterData(e.target.value)}>
             <option value='all'>Filter Timeline</option>
             <option value='Call'>Call</option>
             <option value='Text'>Text</option>

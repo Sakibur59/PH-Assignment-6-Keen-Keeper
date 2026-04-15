@@ -18,7 +18,7 @@ const FooterPage = () => {
                 <div className='max-w-290 mx-auto pt-3 text-[#FAFAFA]'>
                     <div className='flex justify-between'>
                         <p>© 2026 KeenKeeper. All rights reserved.</p>
-                    <div className='flex justify-end gap-6'>
+                    <div className='lg:flex justify-end gap-6 flex-row'>
                         
                         <div>
 

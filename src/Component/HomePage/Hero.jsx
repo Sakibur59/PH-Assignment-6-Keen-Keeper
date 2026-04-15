@@ -17,7 +17,7 @@ const Hero = () => {
           <FaPlus /> Add a Friend
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-5 text-center mt-5  p-10 border-b border-[#E9E9E9]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center mt-5  p-10 border-b border-[#E9E9E9]">
         <div className="card  card-lg shadow-sm bg-white">
           <div className="card-body ">
             <h2 className="text-center text-[#244D3F] font-semibold text-3xl">10</h2>
